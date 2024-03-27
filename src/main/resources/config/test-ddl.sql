@@ -1,0 +1,4 @@
+CREATE TABLE test1 (
+    id         IDENTITY NOT NULL PRIMARY KEY,
+  PRIMARY KEY (id)
+);
