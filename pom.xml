@@ -8,6 +8,8 @@
 
     <properties>
         <manifold.version>2024.1.11</manifold.version>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
     </properties>
 
     <build>
@@ -17,9 +19,6 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.12.1</version>
                 <configuration>
-                    <release>21</release>
-                    <source>21</source>
-                    <target>21</target>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
                         <arg>-Xplugin:Manifold</arg>
