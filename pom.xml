@@ -45,6 +45,11 @@
                             <version>${manifold.version}</version>
                         </path>
                         <path>
+                            <groupId>systems.manifold</groupId>
+                            <artifactId>manifold-params</artifactId>
+                            <version>${manifold.version}</version>
+                        </path>
+                        <path>
                             <groupId>com.h2database</groupId>
                             <artifactId>h2</artifactId>
                             <version>2.1.214</version>
@@ -74,6 +79,11 @@
         <dependency>
             <groupId>systems.manifold</groupId>
             <artifactId>manifold-props-rt</artifactId>
+            <version>${manifold.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>systems.manifold</groupId>
+            <artifactId>manifold-params-rt</artifactId>
             <version>${manifold.version}</version>
         </dependency>
         <dependency>
