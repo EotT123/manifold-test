@@ -1,6 +1,0 @@
-{
-    "url": "jdbc:h2:mem:test",
-    "schemaPackage": "test.schema",
-    "dbDdl": "/config/test-ddl.sql",
-    "inMemory": true
-}
