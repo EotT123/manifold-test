@@ -12,7 +12,7 @@ public class Test {
         }
     }
 
-    public record TestRecord(int foo=1, String bar=getBar()) {
+    public record TestRecord(int foo=1, String bar=getBar()) { // Method parameter without PARAMETER flag
 
     }
 
