@@ -1,4 +1,4 @@
-package tnext;
+package t716;
 
 import java.util.function.Function;
 
