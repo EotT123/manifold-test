@@ -26,11 +26,44 @@
                     <annotationProcessorPaths>
                         <path>
                             <groupId>systems.manifold</groupId>
-                            <artifactId>manifold-ext</artifactId>
+                            <artifactId>manifold-params</artifactId>
                             <version>${manifold.version}</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>tvdb</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <generatorName>java</generatorName>
+                            <inputSpec>${project.basedir}/src/main/resources/Tvdb/Tvdb-api.json</inputSpec>
+                            <output>${project.build.directory}/generated-source/openapi</output>
+                            <modelPackage>com.tvdb.model</modelPackage>
+                            <apiPackage>com.tvdb.api</apiPackage>
+                            <invokerPackage>com.tvdb.invoker</invokerPackage>
+                            <packageName>com.tvdb</packageName>
+                            <skipValidateSpec>true</skipValidateSpec>
+                            <apisToGenerate>Series,Search</apisToGenerate>
+                            <generateModelTests>false</generateModelTests>
+                            <configOptions>
+                                <typeMappings>integer=int,int=int</typeMappings>
+                                <serializableModel>true</serializableModel>
+                                <booleanGetterPrefix>is</booleanGetterPrefix>
+                                <disallowAdditionalPropertiesIfNotPresent>false</disallowAdditionalPropertiesIfNotPresent>
+                                <useJakartaEe>true</useJakartaEe>
+                                <library>retrofit2</library>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -38,13 +71,43 @@
     <dependencies>
         <dependency>
             <groupId>systems.manifold</groupId>
-            <artifactId>manifold-ext-rt</artifactId>
+            <artifactId>manifold-params-rt</artifactId>
             <version>${manifold.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.jspecify</groupId>
-            <artifactId>jspecify</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.gsonfire</groupId>
+            <artifactId>gson-fire</artifactId>
+            <version>1.8.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-gson</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openapitools</groupId>
+            <artifactId>jackson-databind-nullable</artifactId>
+            <version>0.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.oltu.oauth2</groupId>
+            <artifactId>org.apache.oltu.oauth2.client</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-scalars</artifactId>
+            <version>2.6.2</version>
         </dependency>
     </dependencies>
 </project>
