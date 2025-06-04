@@ -29,6 +29,11 @@
                             <artifactId>manifold-ext</artifactId>
                             <version>${manifold.version}</version>
                         </path>
+                        <path>
+                            <groupId>systems.manifold</groupId>
+                            <artifactId>manifold-params</artifactId>
+                            <version>${manifold.version}</version>
+                        </path>
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
@@ -39,6 +44,11 @@
         <dependency>
             <groupId>systems.manifold</groupId>
             <artifactId>manifold-ext-rt</artifactId>
+            <version>${manifold.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>systems.manifold</groupId>
+            <artifactId>manifold-params-rt</artifactId>
             <version>${manifold.version}</version>
         </dependency>
         <dependency>
