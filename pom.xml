@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <manifold.version>2025.1.17</manifold.version>
+        <manifold.version>2025.1.22</manifold.version>
         <maven.compiler.source>24</maven.compiler.source>
         <maven.compiler.target>24</maven.compiler.target>
     </properties>
@@ -26,7 +26,7 @@
                     <annotationProcessorPaths>
                         <path>
                             <groupId>systems.manifold</groupId>
-                            <artifactId>manifold-ext</artifactId>
+                            <artifactId>manifold-params</artifactId>
                             <version>${manifold.version}</version>
                         </path>
                     </annotationProcessorPaths>
@@ -38,13 +38,8 @@
     <dependencies>
         <dependency>
             <groupId>systems.manifold</groupId>
-            <artifactId>manifold-ext-rt</artifactId>
+            <artifactId>manifold-params-rt</artifactId>
             <version>${manifold.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jspecify</groupId>
-            <artifactId>jspecify</artifactId>
-            <version>1.0.0</version>
         </dependency>
     </dependencies>
 </project>
