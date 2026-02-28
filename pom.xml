@@ -26,7 +26,12 @@
                     <annotationProcessorPaths>
                         <path>
                             <groupId>systems.manifold</groupId>
-                            <artifactId>manifold-ext</artifactId>
+                            <artifactId>manifold-props</artifactId>
+                            <version>${manifold.version}</version>
+                        </path>
+                        <path>
+                            <groupId>systems.manifold</groupId>
+                            <artifactId>manifold-delegation</artifactId>
                             <version>${manifold.version}</version>
                         </path>
                     </annotationProcessorPaths>
@@ -38,7 +43,12 @@
     <dependencies>
         <dependency>
             <groupId>systems.manifold</groupId>
-            <artifactId>manifold-ext-rt</artifactId>
+            <artifactId>manifold-props-rt</artifactId>
+            <version>${manifold.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>systems.manifold</groupId>
+            <artifactId>manifold-delegation-rt</artifactId>
             <version>${manifold.version}</version>
         </dependency>
     </dependencies>
