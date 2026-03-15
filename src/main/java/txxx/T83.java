@@ -9,8 +9,8 @@ public class T83 {
 
     public abstract static class Test {
 
-        abstract @val String foo;
-        @val(Abstract) String bar;
+        abstract @val String foo; // No usages, implementations not found
+        @val(Abstract) String bar; // No usages, implementations not found
     }
 
     public static class Test2 extends Test {
