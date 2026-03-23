@@ -5,5 +5,5 @@ import org.jspecify.annotations.NullMarked;
 
 @NullMarked
 public abstract class Test {
-    @val abstract String foo;
+    @val abstract String foo; // @NullMarked fields must be initialized 
 }
