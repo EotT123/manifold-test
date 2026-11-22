@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <manifold.version>2025.1.27</manifold.version>
+        <manifold.version>2026.1.16</manifold.version>
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
     </properties>
@@ -19,14 +19,19 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.12.1</version>
                 <configuration>
+                    <!-- Run javac in a separate process -->
+                    <fork>true</fork>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
                         <arg>-Xplugin:Manifold</arg>
+                        <!-- <arg>-XDdev</arg>-->
+                        <!-- Enable remote debugging of javac -->
+                        <!-- <arg>-J-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:8000</arg>-->
                     </compilerArgs>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>systems.manifold</groupId>
-                            <artifactId>manifold-ext</artifactId>
+                            <artifactId>manifold-params</artifactId>
                             <version>${manifold.version}</version>
                         </path>
                     </annotationProcessorPaths>
@@ -38,7 +43,7 @@
     <dependencies>
         <dependency>
             <groupId>systems.manifold</groupId>
-            <artifactId>manifold-ext-rt</artifactId>
+            <artifactId>manifold-params-rt</artifactId>
             <version>${manifold.version}</version>
         </dependency>
     </dependencies>
